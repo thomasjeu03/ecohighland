@@ -1,15 +1,78 @@
-body{
-    width: 100vw;
-    height: 100vh;
-    background: #242026;
-    color: #fff;
+:root{
+    --title-font: 'Space Mono', monospace;
+    --text-font: 'Space Mono', monospace;
+    --primary-color: #3366ff;
+    --secondary-color: #ff66ff;
+    --tertiary-color: #ff1155;
+    --font-color: #fff;
+    --bg-color: #000;
+}
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Misto';
+    src: url('static/fonts/Misto.eot');
+    src: url('static/fonts/Misto.eot') format('embedded-opentype'),
+    url('static/fonts/Misto.woff2') format('woff2'),
+    url('static/fonts/Misto.woff') format('woff'),
+    url('static/fonts/Misto.ttf') format('truetype'),
+    url('static/fonts/Misto.svg#Misto') format('svg');
+}
+@font-face {
+    font-family: 'LBA';
+    src: url('static/fonts/LaBelleAurore.ttf');
+    src: url('static/fonts/LaBelleAurore.ttf') format('truetype');
+}
+::-webkit-scrollbar{
+    width: 5px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background: #fd5530;
+    border-radius: 10px;
+}
+
+html{
+    font-family: var(--text-font);
+    color: var(--font-color);
+    overflow-x: hidden;
+    width: 100vw;
     display: flex;
-    font-size: 20px;
-    font-family: 'Gotham', sans-serif;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    cursor: url("../img/cursor.svg"), auto;
+    align-items: center;
+    justify-content: center;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+}
+figure{
+    width: 100%;
+    height: 100%;
+}
+figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+li{
+    list-style-type: none;
+}
+a{
+    color: var(--text-font);
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+}
+a:hover{
+    transition: 0.4s ease-in-out;
+    color: var(--text-font);
 }
