@@ -54,20 +54,46 @@
         <a class="hover-effect" href="#contact">Contact</a>
     </nav>
 
-    <div class="header">
-        <h1>MacPro</h1>
-    </div>
+    <section class="header" id="header">
 
-    <canvas class="macpro-scrolling"></canvas>
+    </section>
+
+    <section class="grid2" id="histoire_viande">
+        <div class="histoire">
+            <h2>Notre Histoire</h2>
+            <canvas class="macpro-scrolling"></canvas>
+        </div>
+        <div class="viande">
+            <h2>Notre Viande</h2>
+        </div>
+    </section>
+
+    <section class="parc" id="parc" style="background-image: url('img/bg_parc.png');">
+        <h2>Nos parcs</h2>
+    </section>
+
+    <section class="grid2" id="valeurs_travail">
+        <div class="valeurs">
+            <h2>Nos valeurs</h2>
+        </div>
+        <div class="travail">
+            <h2>Notre travail</h2>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Nous contacter</h2>
+    </section>
+
 
 
     <style>
         canvas{
-            position: sticky;
+            position: absolute;
             top: 50%;
-            transform: translateY(-50%);
-            max-height: 100vh;
-            max-width: 100vw;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
             mix-blend-mode: darken;
         }
     </style>

@@ -7,11 +7,17 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    background: linear-gradient(45deg ,var(--blue-color), var(--green-color));
+    background: linear-gradient(45deg ,var(--dark-color), #0c4c55);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: opacity 1s ease-out;
+}
+.loader h2{
+    -webkit-text-stroke: 0px var(--white-color) !important;
+    color: var(--white-color);
+    font-size: 20px;
+    font-family: var(--text-font) !important;
 }
 .disparition{
     opacity: 0;
