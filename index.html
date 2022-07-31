@@ -37,8 +37,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
 </head>
-<body id="body">
+<body id="body" data-scroll-container>
     <!--Loader-->
     <div class="loader">
         <h2>Chargement...</h2>
@@ -59,7 +60,7 @@
         </a>
     </nav>
 
-    <section class="header" id="header">
+    <section class="header" id="header" data-scroll-section>
         <div class="carousel">
             <span class="txt">
                 <figure class="div1">
@@ -91,7 +92,7 @@
                 </figure>
             </span>
         </div>
-        <h1>Découvrez</h1>
+        <h1 data-scroll data-scroll-speed="-4" data-scroll-direction="horizontal">Découvrez</h1>
         <a href="#histoire_viande" id="arrow">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70.505" height="88" viewBox="0 0 70.505 88">
                 <defs>
@@ -112,21 +113,25 @@
         </a>
     </section>
 
-    <section class="grid2" id="histoire_viande">
-        <div class="histoire">
+    <section class="grid2" id="histoire_viande" data-scroll-section>
+        <div class="histoire"
+             data-scroll
+             data-scroll-sticky
+             data-scroll-target="#histoire_viande"
+             data-scroll-speed="1.2">
             <h2>Notre Histoire</h2>
             <canvas class="macpro-scrolling"></canvas>
         </div>
-        <div class="viande">
+        <div class="viande" style="height: 200vh">
             <h2>Notre Viande</h2>
         </div>
     </section>
 
-    <section class="parc" id="parc" style="background-image: url('img/bg_parc.png');">
+    <section class="parc" id="parc" style="background-image: url('img/bg_parc.png');" data-scroll-section>
         <h2>Nos parcs</h2>
     </section>
 
-    <section class="grid2" id="valeurs_travail">
+    <section class="grid2" id="valeurs_travail" data-scroll-section>
         <div class="valeurs">
             <h2>Nos valeurs</h2>
         </div>
@@ -135,22 +140,11 @@
         </div>
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" data-scroll-section>
         <h2>Nous contacter</h2>
     </section>
 
 
-
-    <style>
-        canvas{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            mix-blend-mode: darken;
-        }
-    </style>
 
     <div class="bg">
         <img src="img/bg.png" alt="bg image">
@@ -173,5 +167,15 @@
     <script src="js/loader.js"></script>
     <script src="js/mac_scrolling.js"></script>
     <script src="js/app.js"></script>
+    <!--Locomotiv JS-->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script>
+        const scrool = new LocomotiveScroll({
+            el: document.querySelector("[data-scroll-container]"),
+            smooth: true,
+            tablet: {smooth: true},
+            smartphone: {smooth: true},
+        })
+    </script>
 </body>
 </html>

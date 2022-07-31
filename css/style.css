@@ -272,7 +272,7 @@ canvas{
     margin-bottom: 20px;
 }
 #histoire_viande .histoire{
-    height: calc(100vh - 124px);
+    height: 100vh;
     width: auto;
     border: 3px solid var(--dark-color);
     border-radius: 20px;
