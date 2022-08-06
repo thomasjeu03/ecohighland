@@ -45,7 +45,7 @@ html{
     font-family: var(--text-font);
     color: var(--dark-color);
     overflow-x: hidden;
-    width: calc(100vw - 15px);
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -270,12 +270,14 @@ canvas{
     width: 100%;
     height: auto;
     margin-bottom: 20px;
+    margin-top: 84px;
 }
 #histoire_viande .histoire{
-    height: 100vh;
+    height: calc(100vh - 104px);
     width: auto;
     border: 3px solid var(--dark-color);
     border-radius: 20px;
+    border-bottom: 20px;
     background: linear-gradient(135deg, var(--rose-claire-color), var(--blue-color));
     overflow: hidden;
     display: flex;
@@ -285,7 +287,8 @@ canvas{
     position: relative;
 }
 #histoire_viande .viande{
-    height: calc(100vh - 124px);
+    min-height: calc(200vh + 20px);
+    height: auto;
     width: auto;
     border: 3px solid var(--dark-color);
     border-radius: 20px;
