@@ -114,7 +114,6 @@ h1{
     letter-spacing: 20px;
     text-transform: uppercase;
     margin-top: 120px;
-    margin-left: 80px;
 }
 h2{
     font-family: var(--title-font);
@@ -217,8 +216,9 @@ canvas{
 
 
 .header{
-    height: calc(100vh - 64px);
+    min-height: calc(100vh - 64px);
     margin-top: 44px;
+    height: auto;
     width: calc(100% + 40px);
     overflow: hidden;
     padding: 20px;
@@ -229,6 +229,13 @@ canvas{
     justify-content: flex-start;
     position: relative;
 }
+.header .titre{
+    width: 100%;
+    max-width: 1400px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
 .header #arrow{
     position: absolute;
     bottom: 100px;
@@ -238,12 +245,6 @@ canvas{
 .header #arrow:hover{
     bottom: 80px;
     transition: 0.3s ease-in-out;
-}
-.carousel {
-    overflow: hidden;
-    display: flex;
-    width: 100%;
-    height: auto;
 }
 .txt {
     display: grid;
@@ -270,24 +271,26 @@ canvas{
     width: 100%;
     height: auto;
     margin-bottom: 20px;
-    margin-top: 84px;
+    position: relative;
 }
 #histoire_viande .histoire{
-    height: calc(100vh - 104px);
+    height: calc(100vh - 104px) !important;
     width: auto;
     border: 3px solid var(--dark-color);
     border-radius: 20px;
-    border-bottom: 20px;
     background: linear-gradient(135deg, var(--rose-claire-color), var(--blue-color));
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    position: relative;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 84px;
+    padding: 50px;
 }
 #histoire_viande .viande{
-    min-height: calc(200vh + 20px);
+    min-height: calc(100vh - 104px);
     height: auto;
     width: auto;
     border: 3px solid var(--dark-color);
@@ -299,17 +302,35 @@ canvas{
     align-items: flex-start;
     justify-content: flex-start;
     position: relative;
-}
-section h2{
     padding: 50px;
 }
+section h2, section h3{
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+section figure{
+    width: 100%;
+    max-width: 70%;
+    aspect-ratio: 2/1;
+    height: auto;
+    margin-bottom: 20px;
+}
+section p{
+    line-height: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 20px;
+    white-space: pre-line;
+}
 #parc{
-    height: calc(100vh - 124px);
+    min-height: calc(100vh - 124px);
+    height: auto;
     width: 100%;
     border: 3px solid var(--white-color);
     border-radius: 20px;
     overflow: hidden;
     display: flex;
+    padding: 50px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -326,6 +347,7 @@ section h2{
     width: 100%;
     height: auto;
     margin-bottom: 20px;
+    position: relative;
 }
 #valeurs_travail .valeurs{
     height: calc(100vh - 124px);
@@ -339,6 +361,7 @@ section h2{
     align-items: flex-start;
     justify-content: flex-start;
     position: relative;
+    padding: 50px;
 }
 #valeurs_travail .travail{
     height: calc(100vh - 124px);
@@ -352,6 +375,7 @@ section h2{
     align-items: flex-start;
     justify-content: flex-start;
     position: relative;
+    padding: 50px;
 }
 #contact{
     height: calc(100vh - 124px);
@@ -364,6 +388,7 @@ section h2{
     align-items: flex-start;
     justify-content: flex-start;
     position: relative;
+    padding: 50px;
     background: linear-gradient(105deg, var(--dark-color), rgba(4, 26, 29, 0.7));
 }
 #contact h2{
