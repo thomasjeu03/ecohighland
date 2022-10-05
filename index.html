@@ -189,6 +189,30 @@
 
     <section class="contact" id="contact">
         <h2>Nous contacter</h2>
+        <a href="mailto:jeusebastien@gmail.com" class="hover-effect">
+            <div>
+                <span>Envoyer un email à jeusebastien@gmail.com</span>
+                <span>Envoyer un email à jeusebastien@gmail.com</span>
+            </div>
+        </a>
+        <form class="contact-form" id="form" action="contactform.php" method="POST">
+            <input class="input" type="text" id="name" name="name" placeholder="Nom">
+
+            <input class="input" type="text" id="firstname" name="first_name" placeholder="Prénom">
+
+            <input class="input" type="email" id="mail" name="mail" placeholder="E-mail" required>
+
+            <input class="input" type="tel" id="tel" name="phone" placeholder="Téléphone">
+
+            <textarea class="input" name="message" id="msg" placeholder="Votre message" required></textarea>
+
+            <button class="button hover-effect" type="submit" name="submit">
+                <div>
+                    <span>Envoyer</span>
+                    <span>Envoyer</span>
+                </div>
+            </button>
+        </form>
     </section>
 
     <div class="bg">
@@ -196,14 +220,14 @@
     </div>
 
     <!--Sourie custom-->
-    <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
     <script>
         new kursor({
             type: 4,
             removeDefaultCursor: true,
-            color: "#041A1D"
+            color: "#a48e6c"
         })
-    </script>
+    </script>-->
     <script>
         AOS.init();
     </script>
