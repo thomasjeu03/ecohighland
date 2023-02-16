@@ -323,7 +323,7 @@ section p{
     white-space: pre-line;
 }
 #parc{
-    min-height: calc(100vh - 124px);
+    /*min-height: calc(100vh - 124px);*/
     height: auto;
     width: 100%;
     border: 3px solid var(--white-color);
@@ -342,6 +342,88 @@ section p{
 }
 #parc h2{
     -webkit-text-stroke: 2px var(--white-color);
+}
+.cards_parc{
+    height: 100%;
+    width: 100% !important;
+    cursor: grab;
+    padding-bottom: 10px !important;
+}
+.cards_parc .swiper-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.cards_parc .card{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4/6;
+    border-radius: 20px;
+    padding: 25px;
+    border: 3px solid var(--blue-color);
+    position: relative;
+}
+.cards_parc .card figure{
+    border: 0;
+    border-radius: 17px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 0;
+    box-shadow: inset 0 0 30px var(--dark-color);
+    left: 0;
+    height: 100%;
+    max-width: 100%;
+}
+.cards_parc .card h3{
+    z-index: 2;
+    position: absolute;
+    bottom: 25px;
+    width: calc(100% - 50px);
+    left: 25px;
+    color: var(--white-color);
+    text-transform: initial;
+    margin: 0 !important;
+    line-height: 35px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.cards_parc .card span{
+    z-index: 2;
+    position: absolute;
+    top: 15px;
+    width: calc(100% - 50px);
+    left: 20px;
+    color: rgba(255, 144, 255, 0.2);
+    text-transform: initial;
+    margin: 0 !important;
+    font-size: 75px;
+    opacity: 1;
+    letter-spacing: 2px;
+    font-family: var(--title-font);
+    -webkit-text-stroke: 2px var(--blue-color);
+    text-stroke: 2px var(--blue-color);
+
+}
+.cards_parc .card:after{
+    content: "";
+    position: absolute;
+    z-index: 1;width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 17px 17px;
+    background: linear-gradient(180deg, #041A1D00, var(--dark-color));
+}
+.cards_parc .card:before{
+    content: "";
+    position: absolute;
+    z-index: -1;width: 100%;
+    height: 100%;
+    bottom: -10px;
+    left: 10px;
+    border-radius: 20px;
+    background: var(--blue-color);
 }
 #valeurs_travail{
     width: 100%;
@@ -467,7 +549,7 @@ textarea{
 
 .bg{
     min-width: 100vw;
-    width: auto;
+    width: 100vw;
     height: 100vh;
     position: fixed;
     top: 50%;
@@ -480,8 +562,9 @@ textarea{
     justify-content: center;
 }
 .bg img{
-    width: auto;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .grid2 {
     display: grid;

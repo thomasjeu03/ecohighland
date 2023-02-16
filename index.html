@@ -30,6 +30,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/loader.css">
 
+    <!-- swiper js-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
     <!-- import Lib -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
@@ -164,6 +167,40 @@
 
     <section class="parc" id="parc" style="background-image: url('img/bg_parc.png');">
         <h2>Nos parcs</h2>
+        <div class="swiper cards_parc mySwiper">
+            <div class="swiper-wrapper">
+                <div class="card swiper-slide">
+                    <span>9ha</span>
+                    <figure>
+                        <img src="img/images14.jpeg" alt="La combe d'Evuaz à Champfromier">
+                    </figure>
+                    <h3>La combe d'Evuaz à Champfromier</h3>
+                </div>
+                <div class="card swiper-slide">
+                    <span>9ha</span>
+                    <figure>
+                        <img src="img/images14.jpeg" alt="La combe d'Evuaz à Champfromier">
+                    </figure>
+                    <h3>La combe d'Evuaz à Champfromier</h3>
+                </div>
+                <div class="card swiper-slide">
+                    <span>9ha</span>
+                    <figure>
+                        <img src="img/images14.jpeg" alt="La combe d'Evuaz à Champfromier">
+                    </figure>
+                    <h3>La combe d'Evuaz à Champfromier</h3>
+                </div>
+                <div class="card swiper-slide">
+                    <span>9ha</span>
+                    <figure>
+                        <img src="img/images14.jpeg" alt="La combe d'Evuaz à Champfromier">
+                    </figure>
+                    <h3>La combe d'Evuaz à Champfromier</h3>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
     </section>
 
     <section class="grid2" id="valeurs_travail">
@@ -230,6 +267,22 @@
     </script>-->
     <script>
         AOS.init();
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiperPark = new Swiper(".mySwiper", {
+            loop: false,
+            slidesPerView: 3.5,
+            spaceBetween: 60,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        });
     </script>
 
     <!-- import JS -->
